@@ -126,7 +126,7 @@ export const loginUser = async (req, res) => {
     const user = await User.findOne({ email });
 
     if (user && (await user.matchPassword(password))) {
-      const token = generateToken(res, user._id);
+      generateToken(res, user._id);
       // console.log(token);
       return res.json({      
         _id: user._id,
