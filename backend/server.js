@@ -21,7 +21,10 @@ const app = express();
 // Middleware to parse JSON
 app.use(express.json());
 // 👇 Middleware to parse cookies
-app.use(cookieParser()); 
+app.use(cors({
+  origin: 'https://prep-ai-frontend.onrender.com', // frontend domain
+  credentials: true
+}));
 app.use(cors());
 
 // Routes
