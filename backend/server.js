@@ -23,7 +23,7 @@ app.use(express.json());
 // 👇 Middleware to parse cookies
 app.use(cookieParser()); 
 app.use(cors({
-  origin: 'http://localhost:5173', // Your frontend origin
+  origin: 'https://prep-ai-frontend.onrender.com/', // Your frontend origin
   credentials: true,              // ⬅️ Required for cookies
 }));
 
